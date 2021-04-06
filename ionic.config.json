@@ -1,0 +1,7 @@
+{
+  "name": "vista_inst",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
