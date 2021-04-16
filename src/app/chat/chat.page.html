@@ -1,0 +1,225 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar class="ion-padding" >
+
+<ion-button slot="start" routerLink="#">
+ <ion-icon name="arrow-back-circle-outline"></ion-icon>
+</ion-button>
+
+    <ion-title> Chat </ion-title>
+    <ion-icon name="chatbubble-ellipses-outline" slot="end"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="tabs ion-padding">
+<ion-segment value="chats" (ionChange)="segmentChange($event)">
+
+  <ion-segment-button value="chats">
+    <ion-label> Chats</ion-label>
+  </ion-segment-button>
+
+  <ion-segment-button value="Llamadas">
+    <ion-label> Llamadas</ion-label>
+  </ion-segment-button>
+</ion-segment>
+</div>
+<div class="chat-list" *ngIf="activeTabs == 'chats' " >
+  <div class="recent-chats ion-padding">
+    <div class="heading">
+      <h1 style="color:black;">Recent Chats</h1>
+      <ion-icon name="search" color="light"></ion-icon>
+    </div>
+    <div class="chats">
+
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Bellamy</h2>
+        <p>Estem...</p>
+        </ion-label>>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Richar</h2>
+        <p>Esta bien</p>
+        </ion-label>>
+        <div class="info-div">
+          <ion-badge>
+            1
+          </ion-badge>
+          <p> 1:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none"routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+    </div>
+  </div>
+  <div class="all-chats ion-padding">
+    <div class="heading">
+      <h1 style="color:black;">Todos los Chats</h1>
+      <ion-icon name="search" color="light"></ion-icon>
+    </div>
+    <div class="chats">
+
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Bellamy</h2>
+        <p>Estem...</p>
+        </ion-label>>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Richar</h2>
+        <p>Esta bien</p>
+        </ion-label>>
+        <div class="info-div">
+          <ion-badge>
+            1
+          </ion-badge>
+          <p> 1:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none"routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Chayito</h2>
+        <p>Te amo!</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+      <ion-item lines="none" routerLink="/conversacion">
+        <ion-avatar slot="start">
+          <ion-img src="http://i.pravatar.cc/300" alt="" ></ion-img>
+        </ion-avatar>
+        <ion-label  class="ion-text-nowrap">
+        <h2>Juana</h2>
+        <p>que tal?</p>
+        </ion-label>>
+        <ion-badge>
+          2
+        </ion-badge>
+        <div class="info-div">
+          <p> 7:10 am </p>
+        </div>
+      </ion-item>
+    </div>
+  </div>
+</div>
+
+<ion-fab-button>
+  <ion-icon name="code-working"></ion-icon>
+</ion-fab-button>
+
+</ion-content>
